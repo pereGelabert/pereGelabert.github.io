@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>projects – Perfil Investigador</title>
+<title>Research and knolege transfer projects – Pere Gelabert</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,6 +33,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -70,7 +72,65 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-title','listing-subtitle','listing-date','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -83,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Perfil Investigador</span>
+    <span class="navbar-title">Pere Gelabert</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -91,31 +151,80 @@ ul.task-list li input[type="checkbox"] {
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-idioma--language" role="link" data-bs-toggle="dropdown" aria-expanded="false">
-      <i class="bi bi-globe" role="img">
-</i> 
- <span class="menu-text">Idioma / Language</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-català" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Català</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-idioma--language">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-català">    
         <li>
     <a class="dropdown-item" href="../ca/index.html">
- <span class="dropdown-text">Català</span></a>
+ <span class="dropdown-text">Inici</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../en/index.html">
- <span class="dropdown-text">English</span></a>
+    <a class="dropdown-item" href="../ca/projectes.html">
+ <span class="dropdown-text">Projectes</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ca/publicacions.html">
+ <span class="dropdown-text">Publicacions</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../ca/premsa.html">
+ <span class="dropdown-text">Premsa</span></a>
   </li>  
     </ul>
   </li>
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/pereGelabert"> <i class="bi bi-github" role="img">
-</i> 
-<span class="menu-text"></span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-english" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">English</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-english">    
+        <li>
+    <a class="dropdown-item" href="../en/index.html">
+ <span class="dropdown-text">Home</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../en/projects.html">
+ <span class="dropdown-text">Projects</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../en/publications.html">
+ <span class="dropdown-text">Publications</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../en/press.html">
+ <span class="dropdown-text">Press</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-castellano" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Castellano</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-castellano">    
+        <li>
+    <a class="dropdown-item" href="../es/index.html">
+ <span class="dropdown-text">Inicio</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../es/proyectos.html">
+ <span class="dropdown-text">Proyectos</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../es/publicaciones.html">
+ <span class="dropdown-text">Publicaciones</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../es/prensa.html">
+ <span class="dropdown-text">Prensa</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://x.com/teu_usuari"> <i class="bi bi-twitter-x" role="img">
+    <a class="nav-link" href="https://github.com/el_teu_usuari"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -130,19 +239,93 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    </div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="QUVJ">AEI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SW5jZW5kaXM=">Incendis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VGVsZWRldGVjY2klQzMlQjM=">Teledetecció <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Research and knolege transfer projects</h1>
+<p class="subtitle lead">Competitive projects, transfer contracts, and international collaborations</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 
 
 
 
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-title" data-direction="asc">
+        Title
+      </option>
+      <option value="listing-date-sort" data-direction="asc">
+        Inici - Oldest
+      </option>
+      <option value="listing-date-sort" data-direction="desc">
+        Inici - Newest
+      </option>
+    </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<div class="list grid quarto-listing-cols-2">
+<div class="g-col-1" data-index="0" data-categories="QUVJJTJDSW5jZW5kaXMlMkNUZWxlZGV0ZWNjaSVDMyVCMw==" data-listing-date-sort="1788213600000" data-listing-file-modified-sort="1785599948120" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="550">
+<a href="../en/projects_data/REBONIC.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../en/projects_data/imatges/aei_thumb.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Resiliencia de los bosques mediterráneos: nicho climático como agente modulador de la respuesta frente a perturbaciones (REBONIC)
+</h5>
+<div class="card-subtitle listing-subtitle">
+Generación del Conocimiento - AEI
+</div>
+<div class="listing-categories">
 
-</main> <!-- /main -->
+<div class="listing-category" onclick="window.quartoListingCategory('QUVJ'); return false;">AEI</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('SW5jZW5kaXM='); return false;">Incendis</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('VGVsZWRldGVjY2klQzMlQjM='); return false;">Teledetecció</div>
+
+</div>
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Sep 1, 2026
+</div>
+</div>
+</div>
+</div></a>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -216,7 +399,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/pereGelabert\.github\.io");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
