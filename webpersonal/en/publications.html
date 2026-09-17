@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-taula-publicacions .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -83,12 +83,13 @@ ul.task-list li input[type="checkbox"] {
 
     const options = {
       valueNames: ['listing-year','listing-title','listing-journal','listing-doi',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] }],
-      
+      page: 20,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-year","listing-title","listing-journal","listing-doi"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-taula-publicacions'] = new List('listing-taula-publicacions', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -262,16 +263,11 @@ window.Quarto = {
 </header>
 
 
-<p>Publications are updated directly from ORCID.</p>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div id="listing-taula-publicacions" class="quarto-listing quarto-listing-container-table">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+    <select id="listing-taula-publicacions-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-taula-publicacions'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
       <option value="" disabled="" selected="" hidden="">Order By</option>
       <option value="index" data-direction="asc">Default</option>
       <option value="listing-year" data-direction="asc">
@@ -317,18 +313,18 @@ window.Quarto = {
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-listing-title-sort="Assessing Community and Protected Area Exposure to Wildfires in Navarra, Spain">
+<tr data-index="0" data-listing-title-sort="Evaluating the potential of forest management in mitigating wildfire hazard under climate change">
 <td>
 <span class="listing-year">2026</span>
 </td>
 <td>
-<span class="listing-title">Assessing Community and Protected Area Exposure to Wildfires in Navarra, Spain</span>
+<span class="listing-title">Evaluating the potential of forest management in mitigating wildfire hazard under climate change</span>
 </td>
 <td>
-<span class="listing-journal">Forests</span>
+<span class="listing-journal">Ecological Modelling</span>
 </td>
 <td>
-<span class="listing-doi"><a href="https://doi.org/10.3390/f17060699">https://doi.org/10.3390/f17060699</a></span>
+<span class="listing-doi"><a href="https://doi.org/10.1016/j.ecolmodel.2026.111822">https://doi.org/10.1016/j.ecolmodel.2026.111822</a></span>
 </td>
 
 </tr>
@@ -349,23 +345,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="2" data-listing-title-sort="Cartografía y análisis de la Interfaz Urbano-Forestal en Chile">
-<td>
-<span class="listing-year">2026</span>
-</td>
-<td>
-<span class="listing-title">Cartografía y análisis de la Interfaz Urbano-Forestal en Chile</span>
-</td>
-<td>
-<span class="listing-journal">Congresos UEx, actas de Congresos</span>
-</td>
-<td>
-<span class="listing-doi"><a href="https://doi.org/10.17398/3101-7177.2.133">https://doi.org/10.17398/3101-7177.2.133</a></span>
-</td>
-
-</tr>
-
-<tr data-index="3" data-listing-title-sort="A dataset to support wildland fire and fuel management in Greece created with stochastic wildfire simulations">
+<tr data-index="2" data-listing-title-sort="A dataset to support wildland fire and fuel management in Greece created with stochastic wildfire simulations">
 <td>
 <span class="listing-year">2026</span>
 </td>
@@ -377,6 +357,22 @@ window.Quarto = {
 </td>
 <td>
 <span class="listing-doi"><a href="https://doi.org/10.1016/j.dib.2025.112304">https://doi.org/10.1016/j.dib.2025.112304</a></span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-listing-title-sort="Human-caused ignition pathways under climate change scenarios in Eastern Spain">
+<td>
+<span class="listing-year">2025</span>
+</td>
+<td>
+<span class="listing-title">Human-caused ignition pathways under climate change scenarios in Eastern Spain</span>
+</td>
+<td>
+<span class="listing-journal">Geomatics, Natural Hazards and Risk</span>
+</td>
+<td>
+<span class="listing-doi"><a href="https://doi.org/10.1080/19475705.2025.2472864">https://doi.org/10.1080/19475705.2025.2472864</a></span>
 </td>
 
 </tr>
@@ -397,23 +393,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="5" data-listing-title-sort="Human-caused ignition pathways under climate change scenarios in Eastern Spain">
-<td>
-<span class="listing-year">2025</span>
-</td>
-<td>
-<span class="listing-title">Human-caused ignition pathways under climate change scenarios in Eastern Spain</span>
-</td>
-<td>
-<span class="listing-journal">Geomatics, Natural Hazards and Risk</span>
-</td>
-<td>
-<span class="listing-doi"><a href="https://doi.org/10.1080/19475705.2025.2472864">https://doi.org/10.1080/19475705.2025.2472864</a></span>
-</td>
-
-</tr>
-
-<tr data-index="6" data-listing-title-sort="A spatially explicit containment modelling approach for escaped wildfires in a Mediterranean climate using machine learning">
+<tr data-index="5" data-listing-title-sort="A spatially explicit containment modelling approach for escaped wildfires in a Mediterranean climate using machine learning">
 <td>
 <span class="listing-year">2025</span>
 </td>
@@ -425,6 +405,22 @@ window.Quarto = {
 </td>
 <td>
 <span class="listing-doi"><a href="https://doi.org/10.1080/19475705.2024.2447514">https://doi.org/10.1080/19475705.2024.2447514</a></span>
+</td>
+
+</tr>
+
+<tr data-index="6" data-listing-title-sort="Biophysical drivers of <i>Pinus nigra subsp. salzmannii</i> post-fire regeneration: role of fire refugia">
+<td>
+<span class="listing-year">2025</span>
+</td>
+<td>
+<span class="listing-title">Biophysical drivers of <i>Pinus nigra subsp. salzmannii</i> post-fire regeneration: role of fire refugia</span>
+</td>
+<td>
+<span class="listing-journal">LANDSCAPE ECOLOGY</span>
+</td>
+<td>
+<span class="listing-doi"><a href="https://doi.org/10.1007/S10980-025-02093-1">https://doi.org/10.1007/S10980-025-02093-1</a></span>
 </td>
 
 </tr>
@@ -477,23 +473,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="10" data-listing-title-sort="War and Deforestation: Using Remote Sensing and Machine Learning to Identify the War-Induced Deforestation in Syria 2010–2019">
-<td>
-<span class="listing-year">2023</span>
-</td>
-<td>
-<span class="listing-title">War and Deforestation: Using Remote Sensing and Machine Learning to Identify the War-Induced Deforestation in Syria 2010–2019</span>
-</td>
-<td>
-<span class="listing-journal">Land</span>
-</td>
-<td>
-<span class="listing-doi"><a href="https://doi.org/10.3390/land12081509">https://doi.org/10.3390/land12081509</a></span>
-</td>
-
-</tr>
-
-<tr data-index="11" data-listing-title-sort="The relationship between fire severity and burning efficiency for estimating wildfire emissions in Mediterranean forests">
+<tr data-index="10" data-listing-title-sort="The relationship between fire severity and burning efficiency for estimating wildfire emissions in Mediterranean forests">
 <td>
 <span class="listing-year">2023</span>
 </td>
@@ -509,7 +489,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="12" data-listing-title-sort="Modelling the daily probability of lightning-caused ignition in the Iberian Peninsula">
+<tr data-index="11" data-listing-title-sort="Modelling the daily probability of lightning-caused ignition in the Iberian Peninsula">
 <td>
 <span class="listing-year">2023</span>
 </td>
@@ -525,7 +505,39 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="13" data-listing-title-sort="Spatially explicit modeling of the probability of land abandonment in the Spanish Pyrenees">
+<tr data-index="12" data-listing-title-sort="Short-term recovery of post-fire vegetation is primarily limited by drought in Mediterranean forest ecosystems">
+<td>
+<span class="listing-year">2023</span>
+</td>
+<td>
+<span class="listing-title">Short-term recovery of post-fire vegetation is primarily limited by drought in Mediterranean forest ecosystems</span>
+</td>
+<td>
+<span class="listing-journal">FIRE ECOLOGY</span>
+</td>
+<td>
+<span class="listing-doi"><a href="https://doi.org/10.1186/S42408-023-00228-W">https://doi.org/10.1186/S42408-023-00228-W</a></span>
+</td>
+
+</tr>
+
+<tr data-index="13" data-listing-title-sort="Short-term recovery of post-fire vegetation is primarily limited by drought in Mediterranean forest ecosystems">
+<td>
+<span class="listing-year">2023</span>
+</td>
+<td>
+<span class="listing-title">Short-term recovery of post-fire vegetation is primarily limited by drought in Mediterranean forest ecosystems</span>
+</td>
+<td>
+<span class="listing-journal">Fire Ecology</span>
+</td>
+<td>
+<span class="listing-doi"><a href="https://doi.org/10.1186/s42408-023-00228-w">https://doi.org/10.1186/s42408-023-00228-w</a></span>
+</td>
+
+</tr>
+
+<tr data-index="14" data-listing-title-sort="Spatially explicit modeling of the probability of land abandonment in the Spanish Pyrenees">
 <td>
 <span class="listing-year">2022</span>
 </td>
@@ -541,39 +553,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="14" data-listing-title-sort="Advancing New Methods for Creating Fire-Resilient Communities in Mediterranean Areas">
-<td>
-<span class="listing-year">2022</span>
-</td>
-<td>
-<span class="listing-title">Advancing New Methods for Creating Fire-Resilient Communities in Mediterranean Areas</span>
-</td>
-<td>
-<span class="listing-journal">Environmental Sciences Proceedings</span>
-</td>
-<td>
-<span class="listing-doi"><a href="https://doi.org/10.3390/environsciproc2022017070">https://doi.org/10.3390/environsciproc2022017070</a></span>
-</td>
-
-</tr>
-
-<tr data-index="15" data-listing-title-sort="High-Resolution Modeling of Lightning Ignition Likelihood in Spain">
-<td>
-<span class="listing-year">2022</span>
-</td>
-<td>
-<span class="listing-title">High-Resolution Modeling of Lightning Ignition Likelihood in Spain</span>
-</td>
-<td>
-<span class="listing-journal">Environmental Sciences Proceedings</span>
-</td>
-<td>
-<span class="listing-doi"><a href="https://doi.org/10.3390/environsciproc2022017040">https://doi.org/10.3390/environsciproc2022017040</a></span>
-</td>
-
-</tr>
-
-<tr data-index="16" data-listing-title-sort="Integrating geospatial wildfire models to delineate landscape management zones and inform decision-making in Mediterranean areas">
+<tr data-index="15" data-listing-title-sort="Integrating geospatial wildfire models to delineate landscape management zones and inform decision-making in Mediterranean areas">
 <td>
 <span class="listing-year">2022</span>
 </td>
@@ -589,23 +569,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="17" data-listing-title-sort="Integrating geospatial wildfire models to delineate landscape management zones and inform decision-making in Mediterranean areas">
-<td>
-<span class="listing-year">2022</span>
-</td>
-<td>
-<span class="listing-title">Integrating geospatial wildfire models to delineate landscape management zones and inform decision-making in Mediterranean areas</span>
-</td>
-<td>
-<span class="listing-journal">Safety Science</span>
-</td>
-<td>
-<span class="listing-doi"><a href="https://doi.org/10.1016/j.ssci.2021.105616">https://doi.org/10.1016/j.ssci.2021.105616</a></span>
-</td>
-
-</tr>
-
-<tr data-index="18" data-listing-title-sort="Recent land cover trends in the transition region of Tiaret, Algeria">
+<tr data-index="16" data-listing-title-sort="Recent land cover trends in the transition region of Tiaret, Algeria">
 <td>
 <span class="listing-year">2022</span>
 </td>
@@ -621,7 +585,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="19" data-listing-title-sort="Fostering Carbon Credits to Finance Wildfire Risk Reduction Forest Management in Mediterranean Landscapes">
+<tr data-index="17" data-listing-title-sort="Fostering Carbon Credits to Finance Wildfire Risk Reduction Forest Management in Mediterranean Landscapes">
 <td>
 <span class="listing-year">2021</span>
 </td>
@@ -637,23 +601,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="20" data-listing-title-sort="Fostering Carbon Credits to Finance Wildfire Risk Reduction Forest Management in Mediterranean Landscapes">
-<td>
-<span class="listing-year">2021</span>
-</td>
-<td>
-<span class="listing-title">Fostering Carbon Credits to Finance Wildfire Risk Reduction Forest Management in Mediterranean Landscapes</span>
-</td>
-<td>
-<span class="listing-journal">Land</span>
-</td>
-<td>
-<span class="listing-doi"><a href="https://doi.org/10.3390/land10101104">https://doi.org/10.3390/land10101104</a></span>
-</td>
-
-</tr>
-
-<tr data-index="21" data-listing-title-sort="LandTrendr smoothed spectral profiles enhance woody encroachment monitoring">
+<tr data-index="18" data-listing-title-sort="LandTrendr smoothed spectral profiles enhance woody encroachment monitoring">
 <td>
 <span class="listing-year">2021</span>
 </td>
@@ -669,7 +617,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="22" data-listing-title-sort="Maximum height of mountain forests abruptly decreases above an elevation breakpoint">
+<tr data-index="19" data-listing-title-sort="Maximum height of mountain forests abruptly decreases above an elevation breakpoint">
 <td>
 <span class="listing-year">2021</span>
 </td>
@@ -685,7 +633,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="23" data-listing-title-sort="Has COVID-19 halted winter-spring wildfires in the Mediterranean? Insights for wildfire science under a pandemic context">
+<tr data-index="20" data-listing-title-sort="Has COVID-19 halted winter-spring wildfires in the Mediterranean? Insights for wildfire science under a pandemic context">
 <td>
 <span class="listing-year">2021</span>
 </td>
@@ -701,7 +649,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="24" data-listing-title-sort="Geospatial Modeling of Containment Probability for Escaped Wildfires in a Mediterranean Region">
+<tr data-index="21" data-listing-title-sort="Geospatial Modeling of Containment Probability for Escaped Wildfires in a Mediterranean Region">
 <td>
 <span class="listing-year">2020</span>
 </td>
@@ -717,7 +665,7 @@ window.Quarto = {
 
 </tr>
 
-<tr data-index="25" data-listing-title-sort="Forest structural diversity characterization in Mediterranean landscapes affected by fires using Airborne Laser Scanning data">
+<tr data-index="22" data-listing-title-sort="Forest structural diversity characterization in Mediterranean landscapes affected by fires using Airborne Laser Scanning data">
 <td>
 <span class="listing-year">2020</span>
 </td>
@@ -736,7 +684,17 @@ window.Quarto = {
 </tbody>
 </table>
 <div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+<nav id="taula-publicacions-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
+</div>
+<hr>
+<p>Publications are updated directly from ORCID.</p>
+
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

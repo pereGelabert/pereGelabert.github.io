@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ca" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JugaR: gamificació per suavitzar la corba d’aprenentatge del llenguatge R</title>
+<meta name="description" content="Suavitzar la corba d’aprenentatge del llenguatge R mitjançant la gamificació">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilos.css">
+<style>
+  .quotes-container {
+    background-color: var(--fondo-alt, #f7f9fa);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    border-left: 4px solid #1F4BD8;
+  }
+  .quote {
+    font-style: italic;
+    color: var(--texto-secundario, #4a5568);
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+  }
+  .quote:last-child { margin-bottom: 0; }
+  .quote strong { font-weight: 600; color: var(--texto-principal, #1a202c); }
+  .single-col-figure {
+    max-width: 720px;
+    margin: 2rem auto;
+  }
+</style>
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contingut</a>
+
+<header class="barra">
+  <div class="envoltorio barra__int">
+    <a class="marca" href="#inicio">JugaR: gamificació per suavitzar la corba d’aprenentatge del llenguatge R<span>Projecte d'Innovació Docent</span></a>
+    <nav aria-label="Seccions">
+      <ul class="menu">
+        <li><a href="#inicio">Inici</a></li>
+        <li><a href="#proyecto">El projecte</a></li>
+        <li><a href="#metodologia">Metodologia</a></li>
+        <li><a href="#resultados">Resultats</a></li>
+        <li><a href="#percepcio">Percepció</a></li>
+        <li><a href="#equipo">Equip</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+<div class="image-container">
+  <img src="img/logo_projecte.png" alt="Logo Projecte JugaR">
+</div>
+  <div class="envoltorio portada" id="inicio">
+    <p class="dato-conv anim">Convocatòria Projectes Innovació Docent 2025/2026 · Universitat de Lleida</p>
+    <h1 class="anim">La introducció a la lògica de programació és àrdua. JugaR en facilita l'aprenentatge?</h1>
+    <p class="entrada anim">Aquest projecte incorpora gamificació i aprenentatge basat en reptes per suavitzar la corba d'aprenentatge d'R.</p>
+
+    <dl class="ficha anim">
+      <div><dt>Centre</dt><dd>Escola Tècnica Superior d'Enginyeria Agroalimentària i Forestal i de Veterinària (ETSEAFIV)</dd></div>
+      <div><dt>Cursos</dt><dd>4t Grau en Conservació de la Natura / Màster Enginyeria de Forests</dd></div>
+      <div><dt>Participants</dt><dd>22 estudiants (13 control, 9 experimental)</dd></div>
+      <div><dt>Duració</dt><dd>Segon semestre (Curs 2025/2026)</dd></div>
+    </dl>
+  </div>
+
+  <section id="proyecto">
+    <div class="envoltorio">
+      <div class="rotulo"><h2>El projecte</h2><em>Punt de partida i objectius</em></div>
+      <div class="dos-col">
+        <div class="prosa">
+          <p>R és una eina essencial en la ciència de dades, però la seva corba inicial, agreujada per una sintaxi exigent i la manca d'interfícies visuals intuïtives, tendeix a frustrar l'alumnat. Com a resultat, es dedica massa docència a explicar la pròpia eina, llevant pes a l'anàlisi de la disciplina.</p>
+          <p>Articulem una gimcana a l'aula d'informàtica on l'estudiant treballa en reptes estructurats però, a mig procés, ha d'intercanviar la màquina amb una altra parella per revisar, avaluar i millorar el codi escrit fins a aquell moment.</p>
+          <p>Avaluar un tercer obliga a posar en pràctica el sentit crític i a entendre la mecànica del codi.</p>
+        </div>
+        <div>
+          <ul class="objetivos">
+            <li><b>O1</b><span>Comprendre la lògica de llenguatge orientat a objectes en R, manipulant vectors i data frames.</span></li>
+            <li><b>O2</b><span>Llegir i escriure codi R de forma estructurada, eficient i aplicable a reptes de la disciplina.</span></li>
+            <li><b>O3</b><span>Consolidar coneixements mitjançant la revisió per parells.</span></li>
+            <li><b>O4</b><span>Replicabilitat a cost 0€ i foment de l'autonomia de l'usuari amb programari lliure.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="metodologia">
+    <div class="envoltorio">
+      <div class="rotulo"><h2>Metodologia</h2></div>
+      <div class="dos-col">
+        <div>
+          <ol class="fases">
+            <li>
+              <div>
+                <h3>Fase 1: Sessió Teòrica</h3>
+                <p>Introducció formal a RStudio i definició d'elements estructurals. Explicació focalitzada en l'entorn de treball, objectes, vectors, matrius, funcions bàsiques i integració de biblioteques basades 100% en programari lliure.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Fase 2: Gimcana interactiva</h3>
+                <p>Resolució de reptes en parelles a l'aula d'informàtica de forma gamificada. Cada alumne inicia la solució, canvia d'estació i ha de prendre decisions sobre el codi del company: corregir errors existents i continuar el desenvolupament.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Fase 3: Avaluació</h3>
+                <p>Prova tipus test dels continguts explicats durant la sessió teòrica i la gimcana. Test de contrast entre el grup experimental i control.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div>
+          <div class="tabla-scroll">
+            <table>
+              <caption>Mostra</caption>
+              <thead>
+                <tr><th scope="col">Instrument</th><th scope="col">Grup</th><th scope="col">n</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Prova de continguts</td><td>Gr. Control (2 cursos més)</td><td>13</td></tr>
+                <tr><td>Prova de continguts</td><td>Gr. Experimental</td><td>9</td></tr>
+                <tr><td>Enquesta de satisfacció</td><td>Gr. Experimental</td><td>7</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="prosa" style="margin-top:1.5rem;color:var(--gris);font-size:.95rem">Disseny experimental: El grup experimental (amb dos cursos menys d'experiència acadèmica que el control) rep formació gamificada amb un cost econòmic de 0€, emprant exclusivament ecosistemes de codi obert fàcilment replicables en qualsevol assignatura nova.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resultados">
+    <div class="envoltorio">
+      <div class="rotulo"><h2>Resultats i Avaluació</h2></div>
+
+      <dl class="cifras">
+        <div><dt>5,33</dt><dd>Nota mitjana (sobre 10) al grup experimental enfront al 4,46 del control, malgrat tenir dos cursos menys d'experiència prèvia.</dd></div>
+        <div><dt>+ 1,5</dt><dd>Punts de millora en la secció de resolució i depuració d'errors respecte al control.</dd></div>
+        <div><dt>0€</dt><dd>Cost total d'implementació gràcies a l'ús de software lliure, garantint una replicabilitat immediata i sense barreres pressupostàries.</dd></div>
+      </dl>
+
+      <!-- FIGURA 1: Barres (Una sota l'altre) -->
+      <figure class="single-col-figure">
+        <div class="grafico">
+          <svg viewBox="0 0 720 300" role="img" aria-label="Gràfic de barres: puntuació mitjana per blocs temàtics reals.">
+            <g font-family="Bricolage Grotesque, sans-serif" font-size="12" fill="currentColor">
+              <!-- ejes -->
+              <g stroke="currentColor" stroke-opacity=".18">
+                <line x1="46" y1="20" x2="720" y2="20"/>
+                <line x1="46" y1="77" x2="720" y2="77"/>
+                <line x1="46" y1="134" x2="720" y2="134"/>
+                <line x1="46" y1="191" x2="720" y2="191"/>
+                <line x1="46" y1="248" x2="720" y2="248" stroke-opacity=".5"/>
+              </g>
+              <g fill="currentColor" fill-opacity=".55" text-anchor="end">
+                <text x="36" y="24">10</text><text x="36" y="81">7,5</text>
+                <text x="36" y="138">5</text><text x="36" y="195">2,5</text><text x="36" y="252">0</text>
+              </g>
+
+              <!-- grupo 1: Bàsics -->
+              <rect x="70" y="161" width="42" height="87" fill="currentColor" fill-opacity=".28" rx="1"/>
+              <rect x="116" y="154" width="42" height="94" fill="#1F4BD8" rx="1"/>
+              <text x="70" y="153" fill-opacity=".55">3,8</text><text x="116" y="146" fill="#1F4BD8">4,1</text>
+              <text x="114" y="270" text-anchor="middle" fill-opacity=".75">Conceptes bàsics</text>
+
+              <!-- grupo 2: Data frames -->
+              <rect x="248" y="100" width="42" height="148" fill="currentColor" fill-opacity=".28" rx="1"/>
+              <rect x="294" y="59" width="42" height="189" fill="#1F4BD8" rx="1"/>
+              <text x="248" y="92" fill-opacity=".55">6,5</text><text x="294" y="51" fill="#1F4BD8">8,3</text>
+              <text x="292" y="270" text-anchor="middle" fill-opacity=".75">Data frames</text>
+
+              <!-- grupo 3: Funcions -->
+              <rect x="426" y="161" width="42" height="87"  fill="currentColor" fill-opacity=".28" rx="1"/>
+              <rect x="472" y="159" width="42" height="89" fill="#1F4BD8" rx="1"/>
+              <text x="426" y="153" fill-opacity=".55">3,8</text><text x="472" y="151" fill="#1F4BD8">3,9</text>
+              <text x="470" y="270" text-anchor="middle" fill-opacity=".75">Funcions</text>
+
+              <!-- grupo 4: Errors -->
+              <rect x="604" y="154" width="42" height="94" fill="currentColor" fill-opacity=".28" rx="1"/>
+              <rect x="650" y="120" width="42" height="128" fill="#1F4BD8" rx="1"/>
+              <text x="604" y="146" fill-opacity=".55">4,1</text><text x="650" y="112" fill="#1F4BD8">5,6</text>
+              <text x="648" y="270" text-anchor="middle" fill-opacity=".75">Resolució errors</text>
+            </g>
+          </svg>
+          <div class="leyenda">
+            <span><i class="muestra" style="background:currentColor;opacity:.28"></i> Control (més avançat)</span>
+            <span><i class="muestra" style="background:#1F4BD8"></i> Experimental (JugaR)</span>
+          </div>
+        </div>
+        <figcaption style="font-size: 0.9rem; text-align: center; margin-top: 10px;">Puntuació mitjana per competències. El grup experimental supera o iguala al control malgrat disposar de menys recorregut acadèmic.</figcaption>
+      </figure>
+
+      <!-- FIGURA 2: Boxplot (Una sota l'altre) -->
+      <figure class="single-col-figure">
+        <div class="grafico" style="max-width: 500px; margin: auto;">
+          <svg viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg">
+            <rect width="460" height="300" fill="none"/>
+            <g transform="translate(60, 20)">
+              <line x1="0" y1="240" x2="380" y2="240" stroke="currentColor" stroke-width="1"/>
+              <line x1="0" y1="0" x2="0" y2="240" stroke="currentColor" stroke-width="1"/>
+              
+              <text x="-10" y="244" font-family="Bricolage Grotesque, sans-serif" fill="currentColor" font-size="12" text-anchor="end">0</text>
+              <line x1="-5" y1="240" x2="0" y2="240" stroke="currentColor"/>
+              
+              <text x="-10" y="124" font-family="Bricolage Grotesque, sans-serif" fill="currentColor" font-size="12" text-anchor="end">5</text>
+              <line x1="-5" y1="120" x2="0" y2="120" stroke="currentColor"/>
+
+              <text x="-10" y="4" font-family="Bricolage Grotesque, sans-serif" fill="currentColor" font-size="12" text-anchor="end">10</text>
+              <line x1="-5" y1="0" x2="0" y2="0" stroke="currentColor"/>
+
+              <line x1="0" y1="120" x2="380" y2="120" stroke="currentColor" stroke-opacity=".18" stroke-dasharray="4,4"/>
+              <line x1="0" y1="60" x2="380" y2="60" stroke="currentColor" stroke-opacity=".18" stroke-dasharray="4,4"/>
+              <line x1="0" y1="180" x2="380" y2="180" stroke="currentColor" stroke-opacity=".18" stroke-dasharray="4,4"/>
+              
+              <text x="95" y="260" font-family="Bricolage Grotesque, sans-serif" fill="currentColor" font-size="13" text-anchor="middle">Control (n=13)</text>
+              <rect x="65" y="108" width="60" height="36" fill="currentColor" fill-opacity="0.28" rx="1"/>
+              <line x1="65" y1="120" x2="125" y2="120" stroke="currentColor" stroke-width="2"/>
+              <line x1="95" y1="108" x2="95" y2="84" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="85" y1="84" x2="105" y2="84" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="95" y1="144" x2="95" y2="168" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="85" y1="168" x2="105" y2="168" stroke="currentColor" stroke-width="1.5"/>
+
+              <text x="285" y="260" font-family="Bricolage Grotesque, sans-serif" fill="currentColor" font-size="13" text-anchor="middle">Experimental (n=9)</text>
+              <rect x="255" y="96" width="60" height="24" fill="#1F4BD8" rx="1"/>
+              <line x1="255" y1="108" x2="315" y2="108" stroke="#fff" stroke-width="2"/>
+              <line x1="285" y1="96" x2="285" y2="96" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="275" y1="96" x2="295" y2="96" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="285" y1="120" x2="285" y2="144" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="275" y1="144" x2="295" y2="144" stroke="currentColor" stroke-width="1.5"/>
+            </g>
+          </svg>
+        </div>
+        <figcaption style="font-size: 0.9rem; text-align: center; margin-top: 10px;">Distribució de notes totals. El grup experimental compacta els resultats i elimina els suspesos severs.</figcaption>
+      </figure>
+
+      <div class="prosa">
+        <h3 style="margin:0 0 .75rem">Interpretació de resultats</h3>
+        <p>Un aspecte clau a destacar és que el grup experimental ha superat o igualat en pràcticament tots els blocs al grup control, <strong>malgrat que aquest darrer compta amb dos cursos més d'experiència acadèmica</strong>. Això suggereix una eficàcia alta de la metodologia gamificada.</p>
+        <p>Pel que fa les habilitats en la <strong>creació i ús de funcions pròpies</strong>, els resultats mostren un comportament molt similar entre ambdós grups. En tractar-se de l'estadi més abstracte de la programació bàsica, s'evidencia que la seva consolidació requereix una major continuïtat temporal, tot i que la moetodologia proposada aconsegueix equiparar un alumnat més novell amb un altre d'avançat.</p>
+        <p>Finalment, cal subratllar que l'ús exclusiu de programari lliure permet una <strong>replicabilitat a cost 0€</strong>, facilitant que qualsevol docent pugui adoptar i escalar aquesta estructura metodològica sense dependre de pressupostos o llicències de pagament.</p>
+        
+        <p> La kimitació més rellevant d'aquest projecte és la petita mostra (n=22). Tot i que aquesta limitació estadística impedeix assolir una significació estadítica en els contrastos numèrics, l'anàlisi semiquantitativa de dades revela una tendència positiva vers a la metodologia d'aprenentatge proposada.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="percepcio">
+    <div class="envoltorio">
+      <div class="rotulo"><h2>Percepció del grup experimental</h2></div>
+      
+      <!-- FIGURA 1: Valoració General (Una sota l'altre) -->
+      <figure class="single-col-figure">
+        <div class="grafico">
+          <svg viewBox="0 0 720 280" role="img" aria-label="Gràfic de barres horitzontals: resultats de l'enquesta de satisfacció (Dinàmica)">
+            <g font-family="Bricolage Grotesque, sans-serif" font-size="12" fill="currentColor">
+              <g stroke="currentColor" stroke-opacity=".18">
+                <line x1="200" y1="20" x2="200" y2="240"/>
+                <line x1="300" y1="20" x2="300" y2="240" stroke-dasharray="2,2"/>
+                <line x1="400" y1="20" x2="400" y2="240" stroke-dasharray="2,2"/>
+                <line x1="500" y1="20" x2="500" y2="240" stroke-dasharray="2,2"/>
+                <line x1="600" y1="20" x2="600" y2="240" stroke-dasharray="2,2"/>
+                <line x1="700" y1="20" x2="700" y2="240" stroke-dasharray="2,2"/>
+              </g>
+              <g fill="currentColor" fill-opacity=".55" text-anchor="middle">
+                <text x="200" y="255">0</text>
+                <text x="700" y="255">5</text>
+              </g>
+              
+              <text x="190" y="45" text-anchor="end">Claredat de les activitats</text>
+              <rect x="200" y="32" width="486" height="18" fill="#1F4BD8" rx="2"/>
+              <text x="660" y="45" fill="#fff" text-anchor="end">4.9</text>
+              
+              <text x="190" y="75" text-anchor="end">Utilitat treball en parelles</text>
+              <rect x="200" y="62" width="486" height="18" fill="#1F4BD8" rx="2"/>
+              <text x="660" y="75" fill="#fff" text-anchor="end">4.9</text>
+      
+              <text x="190" y="105" text-anchor="end">Nivell de dificultat adequat</text>
+              <rect x="200" y="92" width="429" height="18" fill="#1F4BD8" fill-opacity="0.9" rx="2"/>
+              <text x="603" y="105" fill="#fff" text-anchor="end">4.3</text>
+              
+              <text x="190" y="135" text-anchor="end">M'ha ajudat a entendre R</text>
+              <rect x="200" y="122" width="414" height="18" fill="#1F4BD8" fill-opacity="0.8" rx="2"/>
+              <text x="588" y="135" fill="#fff" text-anchor="end">4.1</text>
+              
+              <text x="190" y="165" text-anchor="end">Ritme de la sessió</text>
+              <rect x="200" y="152" width="414" height="18" fill="#1F4BD8" fill-opacity="0.8" rx="2"/>
+              <text x="588" y="165" fill="#fff" text-anchor="end">4.1</text>
+              
+              <text x="190" y="195" text-anchor="end">Revisar codi aliè</text>
+              <rect x="200" y="182" width="371" height="18" fill="currentColor" fill-opacity=".4" rx="2"/>
+              <text x="545" y="195" fill="#fff" text-anchor="end">3.7</text>
+              
+              <text x="190" y="225" text-anchor="end">Canviar d'estació</text>
+              <rect x="200" y="212" width="357" height="18" fill="currentColor" fill-opacity=".4" rx="2"/>
+              <text x="531" y="225" fill="#fff" text-anchor="end">3.6</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption style="font-size: 0.9rem; text-align: center; margin-top: 10px;">Valoració de la dinàmica de l'activitat (Escala Likert 1-5).</figcaption>
+      </figure>
+
+      <!-- FIGURA 2: Aprenentatge (Una sota l'altre) -->
+      <figure class="single-col-figure">
+        <div class="grafico">
+          <svg viewBox="0 0 720 280" role="img" aria-label="Gràfic de barres horitzontals: resultats de l'enquesta de satisfacció (Aprenentatge)">
+            <g font-family="Bricolage Grotesque, sans-serif" font-size="12" fill="currentColor">
+              <g stroke="currentColor" stroke-opacity=".18">
+                <line x1="200" y1="20" x2="200" y2="240"/>
+                <line x1="300" y1="20" x2="300" y2="240" stroke-dasharray="2,2"/>
+                <line x1="400" y1="20" x2="400" y2="240" stroke-dasharray="2,2"/>
+                <line x1="500" y1="20" x2="500" y2="240" stroke-dasharray="2,2"/>
+                <line x1="600" y1="20" x2="600" y2="240" stroke-dasharray="2,2"/>
+                <line x1="700" y1="20" x2="700" y2="240" stroke-dasharray="2,2"/>
+              </g>
+              <g fill="currentColor" fill-opacity=".55" text-anchor="middle">
+                <text x="200" y="255">0</text>
+                <text x="700" y="255">5</text>
+              </g>
+              
+              <text x="190" y="55" text-anchor="end">Tipus de dades (num, factor)</text>
+              <rect x="200" y="42" width="443" height="18" fill="#1F4BD8" rx="2"/>
+              <text x="617" y="55" fill="#fff" text-anchor="end">4.4</text>
+              
+              <text x="190" y="95" text-anchor="end">Estructura de dades (data frame)</text>
+              <rect x="200" y="82" width="357" height="18" fill="currentColor" fill-opacity=".4" rx="2"/>
+              <text x="531" y="95" fill="#fff" text-anchor="end">3.6</text>
+      
+              <text x="190" y="135" text-anchor="end">Selecció de files i columnes</text>
+              <rect x="200" y="122" width="357" height="18" fill="currentColor" fill-opacity=".4" rx="2"/>
+              <text x="531" y="135" fill="#fff" text-anchor="end">3.6</text>
+              
+              <text x="190" y="175" text-anchor="end">Errors habituals en R</text>
+              <rect x="200" y="162" width="357" height="18" fill="currentColor" fill-opacity=".4" rx="2"/>
+              <text x="531" y="175" fill="#fff" text-anchor="end">3.6</text>
+              
+              <text x="190" y="215" text-anchor="end">Ús de funcions</text>
+              <rect x="200" y="202" width="343" height="18" fill="currentColor" fill-opacity=".4" rx="2"/>
+              <text x="517" y="215" fill="#fff" text-anchor="end">3.4</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption style="font-size: 0.9rem; text-align: center; margin-top: 10px;">Percepció de millora d'aprenentatge (Escala 1-5).</figcaption>
+      </figure>
+
+      <div class="dos-col">
+        <div class="prosa">
+          <p>D'acord amb els qüestionaris de satisfacció recollits, el projecte ha tingut una acollida excel·lent, registrant una valoració global de 8,7 sobre 10. Unànimement, els estudiants destaquen que l'activitat era clara i que el treball per parelles ha resultat fonamental per afrontar els obstacles inicials del llenguatge R.</p>
+          <p>Els alumnes perceben de manera clara i evident una millora en el seu aprenentatge, destacant especialment la interiorització dels tipus de dades i la capacitat de raonar el codi. Un dels aspectes més valorats ha estat l'obligació de <i>"pensar"</i> i de no dependre del costum mecànic de copiar i enganxar fragments de codi. L'intercanvi d'estacions és reconegut com la peça clau que facilita l'aprenentatge segons els comentaris dels estudiants</p>
+        </div>
+        <div>
+          <div class="quotes-container">
+            <h3 style="margin-top:0; color:#000;">Agunes valoracions...</h3>
+            <p class="quote">"Haber hecho una sesión teórica antes de la práctica y empezar por lo más básico fue clave. En otras asignaturas simplemente <strong>copiabas cosas sin entender</strong>."</p>
+            <p class="quote">"M'ha ajudat molt el fet d'haver de <strong>pensar la solució</strong> i no només copiar codi de la pantalla."</p>
+            <p class="quote">"Va estar molt entretingut i vaig aprendre més que <strong>havent de copiar i enganxar codi.</strong>"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="equipo">
+    <div class="envoltorio">
+      <div class="rotulo"><h2>Equip</h2></div>
+      <ul class="equipo">
+        <li>
+          <span class="inicial" aria-hidden="true">PG</span>
+          <div>
+            <h3>Pere Joan Gelabert Vadillo</h3>
+            <p>Departament de Ciència i Enginyeria Forestal i Agrícola.</p>
+            <p><a href="mailto:perejoan.gelabert@udl.cat">perejoan.gelabert@udl.cat</a></p>
+          </div>
+        </li>
+        <li>
+          <span class="inicial" aria-hidden="true">AA</span>
+          <div>
+            <h3>Aitor Ameztegui González</h3>
+            <p>Departament de Ciència i Enginyeria Forestal i Agrícola.</p>
+            <p><a href="mailto:aitor.ameztegui@udl.cat">aitor.ameztegui@udl.cat</a></p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="envoltorio" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
+    <div class="text-footer">
+      <p>Projecte finançat pel Vicerectorat d'Ordenació Acadèmica i Qualitat, convocatòria Projectes Innovació Docent UdL 2025/2026.</p>
+      <p>Llicència CC BY-SA 4.0.<br></p>
+    </div>
+    <div class="logos-footer" style="display: flex; gap: 1.5rem; align-items: center;">
+      <!-- Ajusta el nom i l'extensió (.png, .svg, .jpg) a la ruta real dels teus fitxers -->
+      <img src="img/logo_vicerectorat.jpeg" alt="Logo Vicerectorat UdL" style="max-height: 65px; width: auto; object-fit: contain;">
+      <img src="img/logo_projecte.png" alt="Logo Projecte JugaR" style="max-height: 65px; width: auto; object-fit: contain;">
+    </div>
+  </div>
+</footer>
+</body>
+</html>
